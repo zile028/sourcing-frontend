@@ -21,10 +21,10 @@
         </div>
         <div>
             <h2>Folow us</h2>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-github-square"></i>
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-github-square"></i></a>
         </div>
     </article>
 </footer>

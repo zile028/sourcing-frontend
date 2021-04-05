@@ -20,12 +20,11 @@
     border: none;
     font-size: 0.9rem;
     margin-top: 20px;
-    letter-spacing: 3px;
-    color: $black;
-    font-weight: 600;
-    font-size: 0.8rem;
-    padding: 15px 35px;
 
+    color: $white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px 35px;
     cursor: pointer;
     transition: background-color $transition;
     &:hover {

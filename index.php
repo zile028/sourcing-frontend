@@ -1,6 +1,6 @@
 <?php include "partials/headerIndex.php"; ?>
-<!-- education -->
-<section class="education">
+<!-- benefit -->
+<section class="benefit">
     <article>
         <div>
             <h3>web & mobil development</h3>

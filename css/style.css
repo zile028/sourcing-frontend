@@ -39,13 +39,13 @@ img {
   display: block;
 }
 
-.container, header hgroup, .education, .about article {
+.container, header hgroup, .benefit, .about article {
   width: 60%;
   margin: 0 auto;
 }
 
 @media (max-width: 769px) {
-  .container, header hgroup, .education, .about article {
+  .container, header hgroup, .benefit, .about article {
     width: 90%;
   }
 }
@@ -239,7 +239,7 @@ header.headerOther h1 {
   background-color: rgba(238, 102, 108, 0.7);
 }
 
-.education {
+.benefit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +258,7 @@ header.headerOther h1 {
   padding: 40px 0;
 }
 
-.education article {
+.benefit article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,56 +280,56 @@ header.headerOther h1 {
   height: 720px;
 }
 
-.education article div {
+.benefit article div {
   padding: 50px 35px;
   background-color: #ee666c;
 }
 
-.education article div h3 {
+.benefit article div h3 {
   font-size: 1.7rem;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-.education article div p {
+.benefit article div p {
   color: #fff;
   line-height: 1.5;
 }
 
-.education article div:first-child {
+.benefit article div:first-child {
   margin-bottom: 30px;
 }
 
-.education article:nth-child(1) {
+.benefit article:nth-child(1) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.education article:nth-child(1) div:last-child {
+.benefit article:nth-child(1) div:last-child {
   background-color: #f3f3f2;
 }
 
-.education article:nth-child(1) div:last-child h3,
-.education article:nth-child(1) div:last-child p {
+.benefit article:nth-child(1) div:last-child h3,
+.benefit article:nth-child(1) div:last-child p {
   color: #212529;
 }
 
-.education article:nth-child(2) div:first-child {
+.benefit article:nth-child(2) div:first-child {
   background-color: #25235b;
 }
 
-.education article:nth-child(3) div:first-child {
+.benefit article:nth-child(3) div:first-child {
   background-color: #f3f3f2;
 }
 
-.education article:nth-child(3) div:first-child h3,
-.education article:nth-child(3) div:first-child p {
+.benefit article:nth-child(3) div:first-child h3,
+.benefit article:nth-child(3) div:first-child p {
   color: #212529;
 }
 
-.education article:nth-child(3) div:last-child {
+.benefit article:nth-child(3) div:last-child {
   background-color: #25235b;
 }
 
@@ -495,6 +495,87 @@ header.headerOther h1 {
   margin: 30px 0;
 }
 
+.education, .blog {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.education article, .blog article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+}
+
+.education article div, .blog article div {
+  width: 100%;
+}
+
+.education article div img, .blog article div img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.education article h2, .blog article h2 {
+  font-weight: 400;
+  color: #25235b;
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.education article button, .blog article button {
+  font-family: "Poppins", sans-serif;
+  background-color: #ee666c;
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 35px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.education article button:hover, .blog article button:hover {
+  background-color: #25235b;
+}
+
+.blog p {
+  margin-top: 20px;
+}
+
+.blog p span {
+  border-left: 1px solid #212529;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.blog p::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #ee666c;
+  margin: 20px 0 10px;
+}
+
 footer {
   background-image: url(../img/footer.jpg);
   padding: 100px 0;
@@ -542,12 +623,26 @@ footer article div {
           flex: 0 0 24%;
 }
 
-footer article div > i {
+footer article div > a {
   font-size: 3rem;
   margin-right: 10px;
+  cursor: pointer;
 }
 
-footer article div > i:last-child {
+footer article div > a:last-child {
   margin-right: 0;
+}
+
+footer article div > a i {
+  -webkit-transition: color 0.5s ease, -webkit-transform 1s ease;
+  transition: color 0.5s ease, -webkit-transform 1s ease;
+  transition: transform 1s ease, color 0.5s ease;
+  transition: transform 1s ease, color 0.5s ease, -webkit-transform 1s ease;
+}
+
+footer article div > a:hover i {
+  color: #25235b;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 /*# sourceMappingURL=style.css.map */

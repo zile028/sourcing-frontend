@@ -100,8 +100,8 @@ header {
         }
     }
 }
-// education
-.education {
+// benefit
+.benefit {
     @extend .container;
     @include flex(space-between, center);
     padding: $py;
@@ -266,6 +266,50 @@ header {
         }
     }
 }
+// education
+.education {
+    padding: $py;
+    @include flex(space-between, flex-start);
+    article {
+        flex: 0 0 32%;
+        div {
+            width: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        h2 {
+            font-weight: 400;
+            color: $primaryColor;
+            font-size: 2rem;
+            line-height: 2;
+        }
+        button {
+            @include btn($secondaryColor, $primaryColor);
+        }
+    }
+}
+// blog
+.blog {
+    @extend .education;
+    p {
+        margin-top: 20px;
+        span {
+            border-left: 1px solid $black;
+            margin-left: 5px;
+            padding-left: 5px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: $secondaryColor;
+            margin: 20px 0 10px;
+        }
+    }
+}
 // footer
 footer {
     background-image: url(../img/footer.jpg);
@@ -287,11 +331,21 @@ footer {
         }
         div {
             flex: 0 0 24%;
-            & > i {
+            & > a {
                 font-size: 3rem;
                 margin-right: 10px;
+                cursor: pointer;
                 &:last-child {
                     margin-right: 0;
+                }
+                i {
+                    transition: transform 1s ease, color $transition;
+                }
+                &:hover {
+                    i {
+                        color: $primaryColor;
+                        transform: rotateY(360deg);
+                    }
                 }
             }
         }
