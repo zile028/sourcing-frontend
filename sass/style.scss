@@ -10,10 +10,17 @@ nav {
     padding: 40px 20%;
     width: 100%;
     transition: $transition;
+    @media (max-width: 769px) {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
     &.scrollBg {
         padding: 10px 20%;
         background-color: $primaryColor;
         box-shadow: 0 0 20px $black;
+        @media (max-width: 769px) {
+            padding: 10px 5%;
+        }
     }
 
     img {
@@ -21,10 +28,18 @@ nav {
     }
     ul {
         @include flex(space-between, center);
+        @media (max-width: 769px) {
+            width: 100%;
+            margin-top: 10px;
+        }
         li {
             text-transform: uppercase;
             font-size: 1.1rem;
             margin-left: 20px;
+            @media (max-width: 769px) {
+                margin-left: 0;
+                font-size: 1rem;
+            }
             a {
                 transition: $transition;
                 &:hover {
@@ -40,6 +55,12 @@ header {
     @include bgBasic(center top, 100% 55vh);
     height: 70vh;
     position: relative;
+    @media (max-width: 769px) {
+        height: 70vh;
+        justify-content: center;
+        background-size: cover;
+        padding-top: 50px;
+    }
 
     hgroup {
         @extend .container;
@@ -51,7 +72,10 @@ header {
         text-align: center;
         @media (max-width: 767px) {
             width: 90%;
-            height: 160px;
+            height: auto;
+            padding: 0 10px;
+            justify-content: center;
+            padding-top: 70px;
         }
         h1 {
             font-size: 7rem;
@@ -63,7 +87,7 @@ header {
             text-shadow: 0 0 10px $secondaryColor;
             transform: translateY(-50%);
             @media (max-width: 767px) {
-                font-size: 5rem;
+                font-size: 4rem;
             }
         }
         h4 {
@@ -84,6 +108,7 @@ header {
             margin-bottom: 30px;
             @media (max-width: 767px) {
                 font-size: 1rem;
+                //margin-top: 20px;
             }
         }
     }
@@ -97,6 +122,10 @@ header {
             padding: 25px 45px;
             line-height: 1;
             background-color: rgba($secondaryColor, 0.7);
+            @media (max-width: 769px) {
+                padding: 20px 35px;
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -105,11 +134,16 @@ header {
     @extend .container;
     @include flex(space-between, center);
     padding: $py;
+
     article {
         @include flex(flex-end, center, column);
         flex: 0 0 31%;
         height: 720px;
-
+        @media (max-width: 769px) {
+            flex: 0 0 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
         div {
             padding: 50px 35px;
             background-color: $secondaryColor;
@@ -125,6 +159,11 @@ header {
             }
             &:first-child {
                 margin-bottom: 30px;
+            }
+            &:last-child {
+                @media (max-width: 769px) {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -149,6 +188,9 @@ header {
             }
         }
         &:nth-child(3) {
+            @media (max-width: 769px) {
+                margin-bottom: 0;
+            }
             div {
                 &:first-child {
                     background-color: $lightGray;
@@ -169,23 +211,41 @@ header {
     padding: $py;
     background: url(../img/bg3.jpg);
     @include bgBasic;
+    @media (max-width: 769px) {
+        @include flex(flex-start, center, column);
+    }
     article {
         @extend .container;
         @include flex(space-between, flex-end);
         &:first-child {
+            @media (max-width: 769px) {
+                order: 2;
+            }
             & > div {
                 flex: 0 0 48%;
+                @media (max-width: 769px) {
+                    flex: 0 0 100%;
+                    margin-top: 20px;
+                }
                 background-color: $secondaryColor;
                 overflow: hidden;
                 &:last-child {
                     padding: 80px 80px 25px;
                     text-align: center;
+                    @media (max-width: 769px) {
+                        padding: 20px 20px 20px;
+                    }
                 }
             }
             .owl-theme .owl-dots .owl-dot span {
                 width: 40px;
                 height: 3px;
                 border-radius: 0px;
+            }
+            .owl-nav {
+                @media (max-width: 769px) {
+                    position: relative;
+                }
             }
             .owl-prev,
             .owl-next {
@@ -195,15 +255,26 @@ header {
                 transform: translateY(-50%);
                 font-size: 2rem;
                 color: $white;
+                @media (max-width: 769px) {
+                    left: -10px;
+                }
             }
             .owl-next {
                 right: -30px;
                 left: unset;
+                @media (max-width: 769px) {
+                    right: -10px;
+                }
             }
         }
         &:last-child {
             margin-top: 50px;
             align-items: flex-start;
+            @media (max-width: 769px) {
+                flex-direction: column;
+                order: 1;
+                margin-top: 0px;
+            }
             p {
                 margin-bottom: 20px;
                 color: $black;
@@ -211,11 +282,16 @@ header {
             div {
                 &:nth-child(1) {
                     flex: 0 0 40%;
+                    @media (max-width: 769px) {
+                        order: 2;
+                    }
                 }
                 &:nth-child(2) {
-                    //@include flex(flex-start, center, column);
                     flex: 0 0 20%;
                     position: relative;
+                    @media (max-width: 769px) {
+                        order: 1;
+                    }
                     h2 {
                         display: block;
                         color: #212529;
@@ -226,10 +302,19 @@ header {
                         left: 0;
                         top: 0;
                         line-height: 1;
+                        @media (max-width: 769px) {
+                            transform: none;
+                            position: relative;
+                            font-size: 3.5rem;
+                            margin-bottom: 10px;
+                        }
                     }
                 }
                 &:nth-child(3) {
                     flex: 0 0 31%;
+                    @media (max-width: 769px) {
+                        order: 3;
+                    }
                 }
             }
         }
@@ -239,8 +324,14 @@ header {
 .services {
     @include flex(space-between, center);
     padding: $py;
+    @media (max-width: 769px) {
+        flex-direction: column;
+    }
     aside {
         flex: 0 0 30%;
+        @media (max-width: 769px) {
+            margin-bottom: 20px;
+        }
         h2 {
             font-size: 6rem;
             color: $black;
@@ -249,6 +340,11 @@ header {
             text-align: left;
             line-height: 1;
             margin-bottom: 20px;
+            @media (max-width: 769px) {
+                transform: none;
+                font-size: 3.5rem;
+                text-align: center;
+            }
         }
     }
     article {
@@ -272,6 +368,10 @@ header {
     @include flex(space-between, flex-start);
     article {
         flex: 0 0 32%;
+        @media (max-width: 769px) {
+            flex: 0 0 100%;
+            margin-bottom: 20px;
+        }
         div {
             width: 100%;
             img {
@@ -315,8 +415,14 @@ footer {
     background-image: url(../img/footer.jpg);
     padding: 100px 0;
     @include bgBasic;
+    @media (max-width: 769px) {
+        padding: 50px 0;
+    }
     article {
         @include flex(space-between, flex-start);
+        @media (max-width: 769px) {
+            //flex-direction: column;
+        }
         img {
             width: auto;
             height: 40px;
@@ -325,12 +431,35 @@ footer {
             color: $black;
             font-weight: 400;
             font-size: 2rem;
+            @media (max-width: 769px) {
+                margin-top: 20px;
+            }
         }
         li {
             line-height: 2.5;
         }
         div {
             flex: 0 0 24%;
+            &:nth-child(1) {
+                @media (max-width: 769px) {
+                    flex: 0 0 100%;
+                }
+            }
+            &:nth-child(2) {
+                @media (max-width: 769px) {
+                    flex: 0 0 48%;
+                }
+            }
+            &:nth-child(3) {
+                @media (max-width: 769px) {
+                    flex: 0 0 48%;
+                }
+            }
+            &:nth-child(4) {
+                @media (max-width: 769px) {
+                    flex: 0 0 100%;
+                }
+            }
             & > a {
                 font-size: 3rem;
                 margin-right: 10px;
