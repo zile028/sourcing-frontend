@@ -1,6 +1,7 @@
 <?php 
+    $class="class='headerOther'";
     $title = '"<h1>Blog</h1>"';
-    include "partials/headerOther.php";
+    include "partials/header.php";
 ?>
 <!-- education -->
 <section class="blog container">

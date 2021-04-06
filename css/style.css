@@ -803,7 +803,8 @@ footer {
 
 @media (max-width: 769px) {
   footer {
-    padding: 50px 0;
+    background-image: url(../img/bg4.jpg);
+    padding: 50px 0 20px;
   }
 }
 

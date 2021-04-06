@@ -21,13 +21,18 @@
 </head>
 
 <body>
-    <header>
-        <?php include "navigation.php";?>
-        <hgroup>
-            <h1>it fusion<br>sourcing</h1>
-            <h4><span class="typing"></span></h4>
-            <p>Our team is with you<br>
-                We help you implement your idea.We are with you untile the end.
-            </p>
-        </hgroup>
+    <header <?php echo $class ?>>
+        <nav>
+            <a href="index.php" class="logo"><img src="img/logo-beli.png" alt=""></a>
+            <ul>
+                <li><a href="index.php">home</a></li>
+                <li><a href="servicies.php">how do we work</a></li>
+                <li><a href="education.php">education</a></li>
+                <li><a href="blog.php">blog</a></li>
+            </ul>
+        </nav>
+
+        <?php echo $title ?>
+
+
     </header>

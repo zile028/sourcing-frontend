@@ -1,6 +1,7 @@
 <?php 
+    $class="class='headerOther'";
     $title = '"<h1>Services</h1>"';
-    include "partials/headerOther.php";
+    include "partials/header.php";
 ?>
 <section class="services container">
     <aside>

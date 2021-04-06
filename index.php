@@ -1,4 +1,16 @@
-<?php include "partials/headerIndex.php"; ?>
+<?php 
+
+$title='<hgroup>
+<h1>it fusion<br>sourcing</h1>
+<h4><span class="typing"></span></h4>
+<p>Our team is with you<br>
+    We help you implement your idea.We are with you untile the end.
+</p>
+</hgroup>';
+
+include "partials/header.php"; 
+
+?>
 <!-- benefit -->
 <section class="benefit">
     <article>

@@ -416,7 +416,8 @@ footer {
     padding: 100px 0;
     @include bgBasic;
     @media (max-width: 769px) {
-        padding: 50px 0;
+        background-image: url(../img/bg4.jpg);
+        padding: 50px 0 20px;
     }
     article {
         @include flex(space-between, flex-start);
